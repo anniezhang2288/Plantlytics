@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "894605686254",
+    "project_id": "textfromimage-47f7d",
+    "storage_bucket": "textfromimage-47f7d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894605686254:android:70c96a273465f89b430aff",
+        "android_client_info": {
+          "package_name": "com.anniezhang.textfromimage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894605686254-a08lktbtt28t4hsln6r75ip5l5bmo4nk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7qJLq4vyzRDISwNk7gumZ6caMyoCOXRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894605686254-a08lktbtt28t4hsln6r75ip5l5bmo4nk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
