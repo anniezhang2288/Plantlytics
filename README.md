@@ -27,8 +27,8 @@ The app uses a convolutional neural network (CNN) trained on a dataset of over 7
     
 ## Achievements
 
-- **Congressional App Challenge**: Won 1st Place and was recognized by Congresswoman Judy Chu.
-- **IgniteCS Programming Expo**: Earned 3rd place in the Web/Mobile Applications category.
+- [**Congressional App Challenge**](https://www.congressionalappchallenge.us/): Won 1st Place and was recognized by Congresswoman Judy Chu.
+- [**IgniteCS Programming Expo**](https://ignitecsexpo.org/): Earned 3rd place in the Web/Mobile Applications category.
 - **STEM Expo Presentation**: Secured an exclusive invitation to present to Congress members at the US Capitol Building, and featured on the House of Representatives website during the #HouseOfCode festival.
 ## Development
 
