@@ -19,63 +19,61 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextInputEditText etLoginEmail;
-    TextInputEditText etLoginPassword;
-    TextView tvRegisterHere;
-    Button btnLogin;
-
-    FirebaseAuth mAuth;
+    private TextInputEditText etLoginEmail;
+    private TextInputEditText etLoginPassword;
+    private TextView tvRegisterHere;
+    private Button btnLogin;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        etLoginEmail = (TextInputEditText)findViewById(R.id.etLoginEmail);
+        // Initialize UI components
+        etLoginEmail = findViewById(R.id.etLoginEmail);
         etLoginPassword = findViewById(R.id.etLoginPassword);
         tvRegisterHere = findViewById(R.id.tvRegisterHere);
         btnLogin = findViewById(R.id.btnLogin);
 
+        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        btnLogin.setOnClickListener(view -> {
-            loginUser();
-        });
-        tvRegisterHere.setOnClickListener(view -> {
-            startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
-        });
+        // Set up click listener for login button
+        btnLogin.setOnClickListener(view -> loginUser());
+
+        // Set up click listener for register text view
+        tvRegisterHere.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this, SignUpActivity.class)));
     }
 
     private void loginUser() {
         String email = etLoginEmail.getText().toString();
         String password = etLoginPassword.getText().toString();
 
+        // Validate email and password fields
         if (TextUtils.isEmpty(email)) {
             etLoginEmail.setError("Email cannot be empty");
             etLoginEmail.requestFocus();
-        }
-        else if (TextUtils.isEmpty(password)) {
+        } else if (TextUtils.isEmpty(password)) {
             etLoginPassword.setError("Password cannot be empty");
             etLoginPassword.requestFocus();
-        }
-        else {
-            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        } else {
+            // Sign in with email and password using Firebase Auth
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(LoginActivity.this, "User logged on successfully", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                    }
-                    else {
+                    } else {
                         Toast.makeText(LoginActivity.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
     }
-    
-    public void OpenSignupPage(View view) {
-        startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
-    }
 
+    public void OpenSignupPage(View view) {
+        startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+    }
 }
