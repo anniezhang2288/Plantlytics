@@ -69,11 +69,6 @@ We welcome contributions to the Plantlytics app. If you have suggestions or impr
 
 This project is licensed under the [MIT License](LICENSE.md) - see the LICENSE file for details.
 
-## Acknowledgments
-
-- Thanks to the creators of the public dataset used for training our model.
-- Appreciation to the Google Cloud Platform for providing the infrastructure for machine learning model training.
-- Kudos to the Android Studio and Firebase teams for their excellent development tools.
 
 ---
 
